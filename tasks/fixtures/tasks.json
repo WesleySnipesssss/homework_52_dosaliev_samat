@@ -1,0 +1,20 @@
+[
+    {
+        "model": "tasks.task",
+        "pk": 1,
+        "fields": {
+            "description": "Купить продукты",
+            "status": "new",
+            "due_date": "2024-11-30"
+        }
+    },
+    {
+        "model": "tasks.task",
+        "pk": 2,
+        "fields": {
+            "description": "Закончить проект",
+            "status": "in_progress",
+            "due_date": "2024-12-05"
+        }
+    }
+]
