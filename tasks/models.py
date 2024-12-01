@@ -10,7 +10,10 @@ class Task(models.Model):
         ('done', 'Сделано'),
     ]
 
-    description = models.CharField(max_length=255, verbose_name="Описание")
+    name = models.CharField(max_length=255)
+    completed = models.BooleanField(default=False)
+
+    description = models.TextField(blank=True, null=True)
     status = models.CharField(
         max_length=15,
         choices=STATUS_CHOICES,
@@ -20,4 +23,4 @@ class Task(models.Model):
     due_date = models.DateField(null=True, blank=True, verbose_name="Дата выполнения")
 
     def __str__(self):
-        return self.description
+        return self.name
